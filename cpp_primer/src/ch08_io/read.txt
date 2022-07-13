@@ -1,0 +1,6 @@
+Get/set tied stream
+The first form (1) returns a pointer to the tied output stream.
+
+The second form (2) ties the object to tiestr and returns a pointer to the stream tied before the call, if any.
+
+The tied stream is an output stream object which is flushed before each i/o operation in this stream object.

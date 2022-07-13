@@ -1,0 +1,5 @@
+(constructor)
+Construct object and optionally open file (public member function )
+open
+Open file (public member function )
+
