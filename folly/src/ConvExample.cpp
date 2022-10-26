@@ -43,6 +43,4 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
-// link:-lfolly
-// link:-ldouble-conversion
-// link:-dl
+// link:-lfolly -ldouble-conversion -ldl -lpthread -lfmt

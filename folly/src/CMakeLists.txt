@@ -1,8 +1,8 @@
-message(STATUS "->src")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 #add_subdirectory(${HOME}/src/common)
-
+add_subdirectory(${HOME}/src/benchmark)
+add_subdirectory(${HOME}/src/test)
 
 
 #⽣成应⽤程序
@@ -65,12 +65,9 @@ target_link_libraries(traits-example ${FOLLY_LIBRARIES} )
 add_executable(smallvector-example SmallVectorExample.cpp)
 target_link_libraries(smallvector-example ${FOLLY_LIBRARIES} )
 
-add_executable(test-future1 test/FutureTest1.cpp)
-target_link_libraries(test-future1 ${FOLLY_LIBRARIES} )
 
-
-add_executable(hash_util HashUtil.cpp)
-target_link_libraries(hash_util ${FOLLY_LIBRARIES} )
+add_executable(hash_example HashExample.cpp)
+target_link_libraries(hash_example ${FOLLY_LIBRARIES} )
 
 add_executable(evicting_cache EvictingCacheMapExample.cpp)
 target_link_libraries(evicting_cache ${FOLLY_LIBRARIES} )
@@ -78,3 +75,5 @@ target_link_libraries(evicting_cache ${FOLLY_LIBRARIES} )
 add_executable(stop-watch-example StopWatchExample.cpp)
 target_link_libraries(stop-watch-example ${FOLLY_LIBRARIES} )
 
+add_executable(xlog-example XLogExample.cpp)
+target_link_libraries(xlog-example ${FOLLY_LIBRARIES} )

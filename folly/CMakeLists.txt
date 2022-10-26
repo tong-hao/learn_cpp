@@ -17,10 +17,16 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 set(HOME ${CMAKE_CURRENT_SOURCE_DIR})
 set(PROJECT_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src/")
 # 编译结果输出目录
-set(EXECUTABLE_OUTPUT_PATH ${HOME}/build/bin)
-set(LIBRARY_OUTPUT_PATH ${HOME}/build/lib)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/lib)
+
+# 指定头文件搜索路径
+INCLUDE_DIRECTORIES(/opt/vesoft/third-party/3.0/include)
+# 指定引用的外部库的搜索路径
+LINK_DIRECTORIES(/opt/vesoft/third-party/3.0/lib)
 
 set(FOLLY_LIBRARIES
+    follybenchmark
     folly
     boost_context
     boost_system
@@ -30,13 +36,15 @@ set(FOLLY_LIBRARIES
     z
     lz4
     snappy
-    iberty
+    # iberty
     fmt
     ssl
     crypto
     pthread
     glog
-    gflags)
+    gflags
+    unwind
+    )
 
 # 子目录
 add_subdirectory(${HOME}/src)

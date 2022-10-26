@@ -9,17 +9,17 @@ int main(int argc, char const *argv[]) {
 	std::cout << "CHAR_BIT: " << CHAR_BIT << std::endl;
 
 	int data = 0;
-	unsigned data_lock = 3;  // 小于 CHAR_BIT/2
+	unsigned int data_lock = 3;  // 小于 CHAR_BIT/2
 	folly::MicroLock l;
 
 	folly::CPUThreadPoolExecutor executors{3};
 
 	for (int i = 0; i < 10; i++) {
 		folly::via(&executors).thenValue([&data, &l, &data_lock](auto &&p) {
-			l.lock(data_lock);
+			l.lock();
 			++data;
 			std::cout << ": " << data << std::endl;
-			l.unlock(data_lock);
+			l.unlock();
 		});
 	}
 

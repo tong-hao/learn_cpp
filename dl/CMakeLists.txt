@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(dl)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(HOME ${CMAKE_CURRENT_SOURCE_DIR})
+
+# 编译结果输出目录
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/lib)
+
+add_subdirectory(src)
