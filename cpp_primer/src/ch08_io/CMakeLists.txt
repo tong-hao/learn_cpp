@@ -1,0 +1,3 @@
+add_executable(ch08_01_iostream ch08_01_iostream.cpp)
+add_executable(ch08_02_fileio ch08_02_fileio.cpp)
+add_executable(ch08_03_stringio ch08_03_stringio.cpp)

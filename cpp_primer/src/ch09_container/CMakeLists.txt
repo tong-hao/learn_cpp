@@ -1,0 +1,6 @@
+add_executable(ch09_01_vector ch09_01_vector.cpp)
+add_executable(ch09_02_deque ch09_02_deque.cpp)
+add_executable(ch09_03_list ch09_03_list.cpp)
+add_executable(ch09_04_array ch09_04_array.cpp)
+add_executable(ch09_05_string ch09_05_string.cpp)
+add_executable(ch09_06_adaptor ch09_06_adaptor.cpp)

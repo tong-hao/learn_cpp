@@ -1,0 +1,7 @@
+add_executable(ch02_1_primer_type ch02_1_primer_type.cpp)
+add_executable(ch02_2_variable ch02_2_variable.cpp)
+add_executable(ch02_3_1_ref ch02_3_1_ref.cpp)
+add_executable(ch02_3_2_point ch02_3_2_point.cpp)
+add_executable(ch02_4_const ch02_4_const.cpp)
+add_executable(ch02_5_type ch02_5_type.cpp)
+add_executable(ch02_6_struct ch02_6_struct.cpp)
