@@ -77,3 +77,6 @@ target_link_libraries(stop-watch-example ${FOLLY_LIBRARIES} )
 
 add_executable(xlog-example XLogExample.cpp)
 target_link_libraries(xlog-example ${FOLLY_LIBRARIES} )
+
+add_executable(string_piece-example StringPieceExample.cpp)
+target_link_libraries(string_piece-example ${FOLLY_LIBRARIES} )

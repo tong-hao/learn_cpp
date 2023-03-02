@@ -19,11 +19,13 @@ SET(PROJECT_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src/")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+include_directories("/opt/vesoft/third-party/3.3/include")
+link_directories("/opt/vesoft/third-party/3.3/lib")
 
 set(PROXYGEN_LIBRARIES
     proxygenhttpserver
     proxygen
-    crypto
+    # crypto
     wangle
     fizz
     sodium
@@ -37,12 +39,17 @@ set(PROXYGEN_LIBRARIES
     lz4
     zstd
     snappy
-    iberty
+    # iberty
     fmt
     ssl
     glog
     gflags
     pthread
+
+    bz2
+    lzma
+    ssl
+    crypto
 )
 
 
