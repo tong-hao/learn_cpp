@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-// 2.1.4 Search in Rotated Sorted Array II
+// 2.1.4 Search in Rotated Sorted Array II（数组有重复）
 
 // Follow up for ”Search in Rotated Sorted Array”: What if duplicates are
 // allowed? Would this affect the run-time complexity? How and why? Write a
@@ -15,9 +15,11 @@ public:
 };
 
 int main(int argc, char const* argv[]) {
-	std::vector<int> vct = {1, 2, 2, 3, 1};
-	Solution1 s;
-	s.find(vct, 1);
+	{
+		std::vector<int> vct = {1, 2, 2, 3, 1};
+		Solution1 s;
+		s.find(vct, 1);
+	}
 
 	return 0;
 }

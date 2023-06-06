@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project("folly_test" C CXX)
+project("yas_test" C CXX)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
 # 显示指定使用的C++编译器
@@ -17,32 +17,11 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/lib)
 
 # 指定头文件搜索路径
-INCLUDE_DIRECTORIES(/opt/vesoft/third-party/3.0/include)
-# 指定引用的外部库的搜索路径
-LINK_DIRECTORIES(/opt/vesoft/third-party/3.0/lib)
+INCLUDE_DIRECTORIES(/home/caton.hao/build_code/nebula-analytics/3rd/yas/include)
+# # 指定引用的外部库的搜索路径
+# LINK_DIRECTORIES(/opt/vesoft/third-party/3.0/lib)
 
-set(FOLLY_LIBRARIES
-    follybenchmark
-    folly
-    boost_context
-    boost_system
-    dl
-    event
-    double-conversion
-    z
-    lz4
-    snappy
-    # iberty
-    fmt
-    ssl
-    crypto
-    pthread
-    glog
-    gflags
-    unwind
-    )
 
 # 子目录
 add_subdirectory(${HOME}/src)
 
-message(STATUS "SRC_LIST:${SRC_LIST}")

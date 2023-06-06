@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-// 2.1.2 Remove Duplicates from Sorted Array II
+// 2.1.2 Remove Duplicates from Sorted Array II (允许重复两次)
 //
 // Follow up for ”Remove Duplicates”: What if duplicates are allowed at most
 // twice? For example, Given sorted array A=[1,1,1,2,2,3], Your function

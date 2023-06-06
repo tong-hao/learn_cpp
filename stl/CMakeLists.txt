@@ -1,14 +1,12 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 project("boost_test" C CXX)
 
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
 # 显示指定使用的C++编译器
 set(CMAKE_CXX_COMPILER "g++")
 # c++11             
-set(CMAKE_CXX_FLAGS "-std=c++11")
-# 调试信息             
-set(CMAKE_CXX_FLAGS "-g")
-# 开启所有警告                     
-set(CMAKE_CXX_FLAGS "-Wall")
+set(CMAKE_CXX_FLAGS "-std=c++17 -g -Wall")
 # 调试包不优化                  
 set(CMAKE_CXX_FLAGS_DEBUG "-O0")
 # release包优化
@@ -26,9 +24,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 
 #子目录
-add_subdirectory(${HOME}/src)
-
-
-
-
-
+add_subdirectory(${HOME}/src/cpp/container)
+add_subdirectory(${HOME}/src/c)
+add_subdirectory(${HOME}/src/cpp11)
+add_subdirectory(${HOME}/src/cpp14)
+add_subdirectory(${HOME}/src/cpp17)

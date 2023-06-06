@@ -1,0 +1,2 @@
+add_executable(_01_variable_template _01_variable_template.cpp)
+add_executable(_02_lambda_expr _02_lambda_expr.cpp)

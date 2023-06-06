@@ -1,10 +1,12 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-project("proxygen_test" C CXX)
+project("boost_test" C CXX)
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # 显示指定使用的C++编译器
 set(CMAKE_CXX_COMPILER "g++")
 # c++11             
-set(CMAKE_CXX_FLAGS "-std=c++11 -g -Wall")
+set(CMAKE_CXX_FLAGS "-std=c++17 -g -Wall")
 # 调试包不优化                  
 set(CMAKE_CXX_FLAGS_DEBUG "-O0")
 # release包优化
@@ -15,45 +17,11 @@ SET(PROJECT_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src/")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-include_directories("/opt/vesoft/third-party/3.3/include")
-link_directories("/opt/vesoft/third-party/3.3/lib")
 
-set(PROXYGEN_LIBRARIES
-    proxygenhttpserver
-    proxygen
-    # crypto
-    wangle
-    fizz
-    sodium
-    folly
-    boost_context
-    boost_system
-    dl
-    event
-    double-conversion
-    z
-    lz4
-    zstd
-    snappy
-    # iberty
-    fmt
-    ssl
-    glog
-    gflags
-    pthread
+#include_directories("/opt/vesoft/third-party/3.3/include")
+#link_directories("/opt/vesoft/third-party/3.3/lib")
 
-    bz2
-    lzma
-    ssl
-    crypto
-)
 
 
 #子目录
-add_subdirectory(${HOME}/src)
-
-
-message(STATUS "SRC_LIST:${SRC_LIST}")
-
-
-
+add_subdirectory(${HOME}/src/)
