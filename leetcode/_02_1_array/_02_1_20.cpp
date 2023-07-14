@@ -14,10 +14,58 @@
 
 class Solution1 {
 public:
+	void set(std::vector<std::vector<int>>& matrix) {
+		if (matrix.empty()) {
+			return;
+		}
+
+		std::vector<bool> rows(matrix.size(), false);
+		std::vector<bool> cols(matrix[0].size(), false);
+		for (size_t i = 0; i < rows.size(); i++) {
+			for (size_t j = 0; j < cols.size(); j++) {
+				if (matrix[i][j] == 0) {
+					rows[i] = true;
+					cols[j] = true;
+					std::cout << "i=" << i << ", j=" << j << std::endl;
+				}
+			}
+		}
+
+		// 标记一整行为0
+		for (size_t i = 0; i < rows.size(); i++) {
+			if (rows[i]) {
+				for (size_t j = 0; j < cols.size(); j++) {
+					matrix[i][j] = 0;
+				}
+			}
+		}
+
+		// 标记一列为0
+		for (size_t i = 0; i < cols.size(); i++) {
+			if (cols[i]) {
+				for (size_t j = 0; j < rows.size(); j++) {
+					matrix[j][i] = 0;
+				}
+			}
+		}
+	}
 };
 
 int main(int argc, char const* argv[]) {
-	{}
+	{
+		std::vector<std::vector<int>> matrix{
+		    {1, 2, 3, 4}, {5, 6, 7, 8}, {0, 10, 11, 12}};
+
+		Solution1 s;
+		s.set(matrix);
+
+		for (size_t i = 0; i < matrix.size(); i++) {
+			for (size_t j = 0; j < matrix[0].size(); j++) {
+				std::cout << matrix[i][j] << " ";
+			}
+			std::cout << std::endl;
+		}
+	}
 
 	return 0;
 }

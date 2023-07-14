@@ -26,10 +26,22 @@
 
 class Solution1 {
 public:
+	std::vector<int> grayCode(int n) {
+		auto toGrayCode = [](int num) { return num ^ (num >> 1); };
+
+		std::vector<int> ret;
+		for (int i = 0; i < (1 << n); i++) {
+			ret.push_back(toGrayCode(i));
+		}
+		return ret;
+	}
 };
 
 int main(int argc, char const* argv[]) {
-	{}
+	Solution1 s;
+	for (int code : s.grayCode(4)) {
+		std::cout << code << std::endl;
+	}
 
 	return 0;
 }
