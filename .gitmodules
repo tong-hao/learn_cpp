@@ -1,3 +1,0 @@
-[submodule "my_rocksdb_example"]
-	path = my_rocksdb_example
-	url = git@github.com:tong-hao/my_rocksdb_example.git
