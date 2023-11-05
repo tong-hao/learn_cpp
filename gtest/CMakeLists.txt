@@ -20,5 +20,8 @@ set(GTEST_LIB
     pthread
     )
 
+# 用于make test
+enable_testing()
+
 # 子目录
 add_subdirectory(src)

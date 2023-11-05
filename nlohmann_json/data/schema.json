@@ -1,0 +1,72 @@
+{
+    "vertices": [
+        {
+            "path": "data/person_csv/v_person.csv",
+            "delimiter": "|",
+            "name": "Person",
+            "id": {
+                "type": "INT",
+                "index": 0
+            },
+            "props": [
+                {
+                    "name": "firstName",
+                    "type": "STRING",
+                    "index": 1
+                },
+                {
+                    "name": "lastName",
+                    "type": "STRING",
+                    "index": 2
+                },
+                {
+                    "name": "gender",
+                    "type": "STRING",
+                    "index": 3
+                },
+                {
+                    "name": "birthday",
+                    "type": "DATE",
+                    "index": 4
+                },
+                {
+                    "name": "creationDate",
+                    "type": "DATETIME",
+                    "index": 5
+                },
+                {
+                    "name": "locationIP",
+                    "type": "STRING",
+                    "index": 6
+                },
+                {
+                    "name": "browserUsed",
+                    "type": "STRING",
+                    "index": 7
+                }
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "path": "data/person_csv/e_knows.csv",
+            "delimiter": "|",
+            "name": "KNOWS",
+            "src": {
+                "type": "INT",
+                "index": 0
+            },
+            "dst": {
+                "type": "INT",
+                "index": 1
+            },
+            "props": [
+                {
+                    "name": "creationDate",
+                    "type": "DATETIME",
+                    "index": 2
+                }
+            ]
+        }
+    ]
+}

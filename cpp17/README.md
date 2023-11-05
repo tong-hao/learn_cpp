@@ -1,6 +1,13 @@
 ## c++17 特性
 > 参考：https://en.cppreference.com/w/cpp/17
 
+---
+## 需要记住
+- 对if和switch语句添加了初始化器
+- namespace嵌套
+---
+
+
 ## Obsolete
 ### Removed:
 - std::auto_ptr,

@@ -157,13 +157,9 @@ public:
 
 	vertex_t() {
 	}
-
-	// vertex_t(const std::string &tag_name, std::string vid,
-	//          const std::unordered_map<string_lite, std::string> &props)
-	//     : tag_name_(tag_name), vid_(vid), props_(props) {
-	// }
-	NLOHMANN_DEFINE_TYPE_INTRUSIVE(vertex_t, tag_name_, vid_, props_);
 };
+
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(vertex_t, tag_name_, vid_, props_);
 
 int main() {
 	{

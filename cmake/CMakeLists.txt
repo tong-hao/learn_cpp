@@ -11,3 +11,4 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/lib)
 
 
 add_subdirectory(src/xxx)
+# add_executable(xxx xxx.cpp)

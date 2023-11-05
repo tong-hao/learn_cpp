@@ -1,6 +1,13 @@
 ## c++14 特性
 > 参考：https://en.cppreference.com/w/cpp/14
 
+---
+## 需要记住的
+std::make_unique
+返回类型支持auto
+
+---
+
 
 ## New language features
 ### variable templates

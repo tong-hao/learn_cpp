@@ -1,6 +1,33 @@
 ## c++11 特性
 > 参考：https://en.cppreference.com/w/cpp/11
 
+---
+## 需要记住的
+constexpr 
+default
+delete
+final
+override
+noexcept
+
+auto 
+decltype
+using
+lambda
+enums
+
+std::atomic
+std::mutex
+std::condition_variable
+thread_local
+
+std::shared_ptr
+std::unique_ptr
+std::weak_ptr
+
+range-for
+
+---
 
 ## 1.语言层面
 ### 1.1 新增的类型
